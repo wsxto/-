@@ -1,0 +1,13 @@
+# Keil MDK 编译产物（可再生成，无需上传）
+*.o
+*.crf
+*.axf
+*.map
+*.lst
+*.dep
+*.d
+*.lib
+*.a
+*.bak
+# Keil 用户界面配置（含本机用户名，不需要上传）
+*.uvguix.*

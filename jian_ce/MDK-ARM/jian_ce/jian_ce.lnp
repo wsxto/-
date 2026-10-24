@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"jian_ce\startup_stm32f103xb.o"
+"jian_ce\main.o"
+"jian_ce\stm32f1xx_it.o"
+"jian_ce\stm32f1xx_hal_msp.o"
+"jian_ce\stm32f1xx_hal_gpio_ex.o"
+"jian_ce\stm32f1xx_hal_tim.o"
+"jian_ce\stm32f1xx_hal_tim_ex.o"
+"jian_ce\stm32f1xx_hal.o"
+"jian_ce\stm32f1xx_hal_rcc.o"
+"jian_ce\stm32f1xx_hal_rcc_ex.o"
+"jian_ce\stm32f1xx_hal_gpio.o"
+"jian_ce\stm32f1xx_hal_dma.o"
+"jian_ce\stm32f1xx_hal_cortex.o"
+"jian_ce\stm32f1xx_hal_pwr.o"
+"jian_ce\stm32f1xx_hal_flash.o"
+"jian_ce\stm32f1xx_hal_flash_ex.o"
+"jian_ce\stm32f1xx_hal_exti.o"
+"jian_ce\stm32f1xx_hal_uart.o"
+"jian_ce\system_stm32f1xx.o"
+--strict --scatter "jian_ce\jian_ce.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "jian_ce.map" -o jian_ce\jian_ce.axf

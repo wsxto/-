@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"yaogan\startup_stm32f103xb.o"
+"yaogan\main.o"
+"yaogan\stm32f1xx_it.o"
+"yaogan\stm32f1xx_hal_msp.o"
+"yaogan\stm32f1xx_hal_gpio_ex.o"
+"yaogan\stm32f1xx_hal_adc.o"
+"yaogan\stm32f1xx_hal_adc_ex.o"
+"yaogan\stm32f1xx_hal.o"
+"yaogan\stm32f1xx_hal_rcc.o"
+"yaogan\stm32f1xx_hal_rcc_ex.o"
+"yaogan\stm32f1xx_hal_gpio.o"
+"yaogan\stm32f1xx_hal_dma.o"
+"yaogan\stm32f1xx_hal_cortex.o"
+"yaogan\stm32f1xx_hal_pwr.o"
+"yaogan\stm32f1xx_hal_flash.o"
+"yaogan\stm32f1xx_hal_flash_ex.o"
+"yaogan\stm32f1xx_hal_exti.o"
+"yaogan\stm32f1xx_hal_tim.o"
+"yaogan\stm32f1xx_hal_tim_ex.o"
+"yaogan\system_stm32f1xx.o"
+--strict --scatter "yaogan\yaogan.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "yaogan.map" -o yaogan\yaogan.axf
