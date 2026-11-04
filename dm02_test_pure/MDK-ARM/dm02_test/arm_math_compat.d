@@ -1,0 +1,27 @@
+dm02_test/arm_math_compat.o: \
+  ..\User_File\1_Middleware\Algorithm\Basic\arm_math_compat.cpp \
+  ..\Middlewares\ST\ARM\DSP\Inc\arm_math.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\string.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\math.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\math.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\type_traits \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\version \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\__nullptr \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\float.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\float.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\libcxx\limits.h \
+  D:\Keil\ARM\ARMCLANG\Bin\..\include\limits.h

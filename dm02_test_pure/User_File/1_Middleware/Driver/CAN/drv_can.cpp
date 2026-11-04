@@ -135,10 +135,43 @@ uint8_t CAN_Transmit_Data(FDCAN_HandleTypeDef *hfdcan, uint16_t ID, uint8_t *Dat
 {
     FDCAN_TxHeaderTypeDef tx_header;
 
+    // Length is a byte count, while HAL_FDCAN expects an encoded DLC value.
+    switch (Length)
+    {
+    case 0:
+        tx_header.DataLength = FDCAN_DLC_BYTES_0;
+        break;
+    case 1:
+        tx_header.DataLength = FDCAN_DLC_BYTES_1;
+        break;
+    case 2:
+        tx_header.DataLength = FDCAN_DLC_BYTES_2;
+        break;
+    case 3:
+        tx_header.DataLength = FDCAN_DLC_BYTES_3;
+        break;
+    case 4:
+        tx_header.DataLength = FDCAN_DLC_BYTES_4;
+        break;
+    case 5:
+        tx_header.DataLength = FDCAN_DLC_BYTES_5;
+        break;
+    case 6:
+        tx_header.DataLength = FDCAN_DLC_BYTES_6;
+        break;
+    case 7:
+        tx_header.DataLength = FDCAN_DLC_BYTES_7;
+        break;
+    case 8:
+        tx_header.DataLength = FDCAN_DLC_BYTES_8;
+        break;
+    default:
+        return HAL_ERROR;
+    }
+
     tx_header.Identifier = ID;
     tx_header.IdType = FDCAN_STANDARD_ID;
     tx_header.TxFrameType = FDCAN_DATA_FRAME;
-    tx_header.DataLength = Length;
     tx_header.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
     tx_header.BitRateSwitch = FDCAN_BRS_OFF;
     tx_header.FDFormat = FDCAN_CLASSIC_CAN;

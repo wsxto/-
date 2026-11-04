@@ -33,13 +33,32 @@
 Class_Motor_DJI_C620 Motor_M3508_1;
 static uint16_t Motor_Alive_Count = 0;
 
+//临时变量，排查问题
+volatile uint32_t dbg_rx_count = 0;
+volatile uint32_t dbg_tx_count = 0;
+volatile uint8_t dbg_motor_status = 0;
+volatile float dbg_target_torque = 0.0f;
+volatile float dbg_now_omega = 0.0f;
+volatile float dbg_now_torque = 0.0f;
+volatile uint8_t dbg_tx_ret = 0;
+volatile uint32_t dbg_can_error = 0;
+volatile uint32_t dbg_tx_fail_count = 0;
+volatile uint32_t dbg_tx_free = 0;
+volatile uint32_t dbg_tec = 0;
+volatile uint32_t dbg_rec = 0;
+volatile uint32_t dbg_bus_off = 0;
+volatile uint32_t dbg_error_passive = 0;
+volatile uint32_t dbg_last_error = 0;
+
+//接受反馈
 static void CAN1_Rx_Callback(FDCAN_RxHeaderTypeDef &Header, uint8_t *Buffer)
 {
     (void)Buffer;
 
     if (Header.IdType == FDCAN_STANDARD_ID &&
-        Header.Identifier == 0x201)
+        Header.Identifier == 0x205)
     {
+		dbg_rx_count ++;    //debug加入变量
         Motor_M3508_1.CAN_RxCpltCallback();
     }
 }
@@ -79,23 +98,51 @@ void Task1s_Callback()
 void Task1ms_Callback()
 {
 	Motor_Alive_Count++;
-	
-	if(Motor_Alive_Count >= 100)
+	if (Motor_Alive_Count >= 100)
 	{
 		Motor_Alive_Count = 0;
-	Motor_M3508_1.TIM_100ms_Alive_PeriodElapsedCallback();
+		Motor_M3508_1.TIM_100ms_Alive_PeriodElapsedCallback();
 	}
-	
-	if(Motor_M3508_1.Get_Status() != Motor_DJI_Status_ENABLE)
+
+	dbg_motor_status = (uint8_t)Motor_M3508_1.Get_Status();
+	if (dbg_motor_status != Motor_DJI_Status_ENABLE)
 	{
 		Motor_M3508_1.Set_Target_Torque(0.0f);
 	}
-	
+	else
+	{
+		// 临时诊断目标；排查结束后恢复原控制逻辑。
+		Motor_M3508_1.Set_Target_Torque(0.3f);
+	}
+	dbg_target_torque = Motor_M3508_1.Get_Target_Torque();
+
 	Motor_M3508_1.TIM_Calculate_PeriodElapsedCallback();
-	
-	CAN_Transmit_Data(&hfdcan1,0x200,CAN1_0x200_Tx_Data,8);
-	
-    TIM_1ms_IWDG_PeriodElapsedCallback();
+	dbg_now_omega = Motor_M3508_1.Get_Now_Omega();
+	dbg_now_torque = Motor_M3508_1.Get_Now_Torque();
+
+	// 每 1 ms 只发送一次，并记录入队结果及 FDCAN 实时状态。
+	uint8_t tx_result = CAN_Transmit_Data(
+		&hfdcan1, 0x1FF, CAN1_0x1ff_Tx_Data, 8);
+	dbg_tx_ret = (uint8_t)tx_result;
+	dbg_tx_count++;
+	if (tx_result != HAL_OK)
+	{
+		dbg_tx_fail_count++;
+	}
+	dbg_tx_free = HAL_FDCAN_GetTxFifoFreeLevel(&hfdcan1);
+	dbg_can_error = HAL_FDCAN_GetError(&hfdcan1);
+
+	FDCAN_ErrorCountersTypeDef error_counters;
+	FDCAN_ProtocolStatusTypeDef protocol_status;
+	HAL_FDCAN_GetErrorCounters(&hfdcan1, &error_counters);
+	HAL_FDCAN_GetProtocolStatus(&hfdcan1, &protocol_status);
+	dbg_tec = error_counters.TxErrorCnt;
+	dbg_rec = error_counters.RxErrorCnt;
+	dbg_bus_off = protocol_status.BusOff;
+	dbg_error_passive = protocol_status.ErrorPassive;
+	dbg_last_error = protocol_status.LastErrorCode;
+
+	TIM_1ms_IWDG_PeriodElapsedCallback(); // 看门狗
 }
 
 /**
@@ -131,11 +178,11 @@ void Task_Init()
 	
 	Motor_M3508_1.Init(
 		&hfdcan1,
-		Motor_DJI_ID_0x201,
+		Motor_DJI_ID_0x205,
 		Motor_DJI_Control_Method_TORQUE
 	);
 	
-	Motor_M3508_1.Set_Target_Torque(0.0f);
+	Motor_M3508_1.Set_Target_Torque(0.3f);
 		
     // 定时器中断初始化
     HAL_TIM_Base_Start_IT(&htim4);

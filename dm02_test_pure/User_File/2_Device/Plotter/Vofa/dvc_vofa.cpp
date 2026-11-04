@@ -12,6 +12,7 @@
 /* Includes ------------------------------------------------------------------*/
 
 #include "dvc_vofa.h"
+#include <cstring>
 
 /* Private macros ------------------------------------------------------------*/
 
@@ -206,7 +207,7 @@ void Class_Vofa_UART::Output()
 {
     uint8_t *tmp_buffer = Tx_Buffer;
 
-    bzero(tmp_buffer, UART_BUFFER_SIZE);
+    memset(tmp_buffer, 0, UART_BUFFER_SIZE);
 
     for (int i = 0; i < Data_Number; i++)
     {
@@ -359,7 +360,7 @@ void Class_Vofa_USB::Output()
 {
     uint8_t *tmp_buffer = Tx_Buffer;
 
-    bzero(tmp_buffer, USB_BUFFER_SIZE);
+    memset(tmp_buffer, 0, USB_BUFFER_SIZE);
 
     for (int i = 0; i < Data_Number; i++)
     {

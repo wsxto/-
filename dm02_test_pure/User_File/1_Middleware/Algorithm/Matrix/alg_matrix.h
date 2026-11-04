@@ -15,6 +15,10 @@
 /* Includes ------------------------------------------------------------------*/
 
 #include "1_Middleware/Algorithm/Basic/alg_basic.h"
+#include <type_traits>
+
+template<bool Condition, typename Type = void>
+using alg_enable_if_t = typename std::enable_if<Condition, Type>::type;
 
 /* Exported macros -----------------------------------------------------------*/
 
@@ -307,7 +311,7 @@ public:
     // 方阵特有
 
     template<int tmp_row = row, int tmp_column = column>
-    inline std::enable_if_t<tmp_row == tmp_column, Class_Matrix_f32<tmp_row, tmp_row>> &operator*=(const Class_Matrix_f32<tmp_row, tmp_row> &Matrix)
+    inline alg_enable_if_t<tmp_row == tmp_column, Class_Matrix_f32<tmp_row, tmp_row>> &operator*=(const Class_Matrix_f32<tmp_row, tmp_row> &Matrix)
     {
         Class_Matrix_f32<tmp_row, tmp_row> result;
         for (int i = 0; i < tmp_row; i++)
@@ -328,25 +332,25 @@ public:
     }
 
     template<int tmp_row = row, int tmp_column = column>
-    inline std::enable_if_t<tmp_row == tmp_column, Class_Matrix_f32<tmp_row, tmp_row>> Get_Inverse() const;
+    inline alg_enable_if_t<tmp_row == tmp_column, Class_Matrix_f32<tmp_row, tmp_row>> Get_Inverse() const;
 
     // 列向量特有
 
     template<int tmp_row = row, int tmp_column = column>
-    inline std::enable_if_t<tmp_column == 1, float> Get_Modulus() const;
+    inline alg_enable_if_t<tmp_column == 1, float> Get_Modulus() const;
 
     template<int tmp_row = row, int tmp_column = column>
-    inline std::enable_if_t<tmp_column == 1, Class_Matrix_f32<tmp_row, 1>> Get_Normalization() const;
+    inline alg_enable_if_t<tmp_column == 1, Class_Matrix_f32<tmp_row, 1>> Get_Normalization() const;
 
     // 三维列向量特有
 
     template<int tmp_row = row, int tmp_column = column>
-    inline std::enable_if_t<tmp_row == 3 && tmp_column == 1, Class_Matrix_f32<3, 3>> Get_Cross_Matrix() const;
+    inline alg_enable_if_t<tmp_row == 3 && tmp_column == 1, Class_Matrix_f32<3, 3>> Get_Cross_Matrix() const;
 
     // 单个元素特有
 
     template<int tmp_row = row, int tmp_column = column>
-    inline std::enable_if_t<tmp_row == 1 && tmp_column == 1, float> Get_Single_Value() const;
+    inline alg_enable_if_t<tmp_row == 1 && tmp_column == 1, float> Get_Single_Value() const;
 
 protected:
     // 初始化相关常量
@@ -494,7 +498,7 @@ inline Class_Matrix_f32<row, 1> Class_Matrix_f32<row, column>::Get_Column(const 
  */
 template<int row, int column>
 template<int tmp_row, int tmp_column>
-inline std::enable_if_t<tmp_row == tmp_column, Class_Matrix_f32<tmp_row, tmp_row>> Class_Matrix_f32<row, column>::Get_Inverse() const
+inline alg_enable_if_t<tmp_row == tmp_column, Class_Matrix_f32<tmp_row, tmp_row>> Class_Matrix_f32<row, column>::Get_Inverse() const
 {
     // 扩展矩阵 [A|I]
     Class_Matrix_f32<tmp_row, 2 * tmp_row> extended_matrix = Namespace_ALG_Matrix::Zero<tmp_row, 2 * tmp_row>();
@@ -586,7 +590,7 @@ inline std::enable_if_t<tmp_row == tmp_column, Class_Matrix_f32<tmp_row, tmp_row
  */
 template<int row, int column>
 template<int tmp_row, int tmp_column>
-inline std::enable_if_t<tmp_column == 1, float> Class_Matrix_f32<row, column>::Get_Modulus() const
+inline alg_enable_if_t<tmp_column == 1, float> Class_Matrix_f32<row, column>::Get_Modulus() const
 {
     float norm = 0.0f;
     for (int i = 0; i < tmp_row; i++)
@@ -608,7 +612,7 @@ inline std::enable_if_t<tmp_column == 1, float> Class_Matrix_f32<row, column>::G
  */
 template<int row, int column>
 template<int tmp_row, int tmp_column>
-inline std::enable_if_t<tmp_column == 1, Class_Matrix_f32<tmp_row, 1>> Class_Matrix_f32<row, column>::Get_Normalization() const
+inline alg_enable_if_t<tmp_column == 1, Class_Matrix_f32<tmp_row, 1>> Class_Matrix_f32<row, column>::Get_Normalization() const
 {
     Class_Matrix_f32<tmp_row, 1> result;
 
@@ -636,7 +640,7 @@ inline std::enable_if_t<tmp_column == 1, Class_Matrix_f32<tmp_row, 1>> Class_Mat
  */
 template<int row, int column>
 template<int tmp_row, int tmp_column>
-inline std::enable_if_t<tmp_row == 3 && tmp_column == 1, Class_Matrix_f32<3, 3>> Class_Matrix_f32<row, column>::Get_Cross_Matrix() const
+inline alg_enable_if_t<tmp_row == 3 && tmp_column == 1, Class_Matrix_f32<3, 3>> Class_Matrix_f32<row, column>::Get_Cross_Matrix() const
 {
     Class_Matrix_f32<3, 3> result;
     result.Data[0] = 0.0f;
@@ -662,7 +666,7 @@ inline std::enable_if_t<tmp_row == 3 && tmp_column == 1, Class_Matrix_f32<3, 3>>
  */
 template<int row, int column>
 template<int tmp_row, int tmp_column>
-inline std::enable_if_t<tmp_row == 1 && tmp_column == 1, float> Class_Matrix_f32<row, column>::Get_Single_Value() const
+inline alg_enable_if_t<tmp_row == 1 && tmp_column == 1, float> Class_Matrix_f32<row, column>::Get_Single_Value() const
 {
     return (Data[0]);
 }

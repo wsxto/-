@@ -13,6 +13,7 @@
 /* Includes ------------------------------------------------------------------*/
 
 #include "dvc_serialplot.h"
+#include <cstring>
 
 /* Private macros ------------------------------------------------------------*/
 
@@ -270,7 +271,7 @@ void Class_Serialplot_UART::Output()
 {
     uint8_t *tmp_buffer = Tx_Buffer;
 
-    bzero(tmp_buffer, UART_BUFFER_SIZE);
+    memset(tmp_buffer, 0, UART_BUFFER_SIZE);
 
     // 放置帧头
     tmp_buffer[0] = Frame_Header;
@@ -524,7 +525,7 @@ void Class_Serialplot_USB::Output()
 {
     uint8_t *tmp_buffer = Tx_Buffer;
 
-    bzero(tmp_buffer, USB_BUFFER_SIZE);
+    memset(tmp_buffer, 0, USB_BUFFER_SIZE);
 
     // 放置帧头
     tmp_buffer[0] = Frame_Header;

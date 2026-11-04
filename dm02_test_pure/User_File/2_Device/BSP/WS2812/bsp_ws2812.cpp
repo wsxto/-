@@ -12,6 +12,7 @@
 /* Includes ------------------------------------------------------------------*/
 
 #include "bsp_ws2812.h"
+#include <cstring>
 
 /* Private macros ------------------------------------------------------------*/
 
@@ -69,7 +70,7 @@ void Class_WS2812::TIM_10ms_Write_PeriodElapsedCallback() const
     uint8_t *tmp_buffer = SPI_Manage_Object->Tx_Buffer;
     uint8_t res = 0;
 
-    bzero(tmp_buffer, SPI_BUFFER_SIZE);
+    memset(tmp_buffer, 0, SPI_BUFFER_SIZE);
     for (uint8_t i = 0; i < 8; i++)
     {
         tmp_buffer[7 - i] = (Color.Green & (1 << i)) ? LEVEL_1 : LEVEL_0;
