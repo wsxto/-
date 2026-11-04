@@ -1,0 +1,19 @@
+build-idx:
+  generated-by: csolution version 2.12.0+p48-gd3223e31
+  csolution: H7_USB_test.csolution.yml
+  cbuild-run: out/H7_USB_test+H7_USB_test.cbuild-run.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: H7_USB_test.cproject.yml
+  cbuilds:
+    - cbuild: out/H7_USB_test/H7_USB_test/H7_USB_test+H7_USB_test.cbuild.yml
+      project: H7_USB_test
+      configuration: +H7_USB_test
+      messages:
+        info:
+          - H7_USB_test.cbuild-pack.yml - file is already up-to-date
+          - H7_USB_test+H7_USB_test.cbuild-run.yml - file is already up-to-date
+          - H7_USB_test+H7_USB_test.cbuild.yml - file is already up-to-date
+      packs-unused:
+        - pack: ARM::CMSIS-DSP@1.16.2
+        - pack: ARM::CMSIS-NN@4.1.0

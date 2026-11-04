@@ -28,7 +28,7 @@ float PID_Calc(PID_TypeDef*pid,float target,float actual)
 
 	//计算
 	pid->integral += pid->error;
-	pid->out = (pid->error * pid->kp) + pid->ki * (pid->integral) + (pid->error - pid->last_error) * pid->kd;
+	pid->out = ((pid->error * pid->kp) + pid->ki * (pid->integral) + (pid->error - pid->last_error) * pid->kd);
 
 	//输出限幅
 	if (pid->out > PID_MAX_OUT){

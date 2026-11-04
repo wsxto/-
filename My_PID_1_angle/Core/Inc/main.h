@@ -39,7 +39,7 @@ extern "C" {
 /* USER CODE BEGIN ET */
 extern uint16_t count_prev;
 extern volatile int16_t rpm;
-extern volatile uint16_t motor_pwm;
+extern volatile int16_t motor_pwm;
 
 /* USER CODE END ET */
 

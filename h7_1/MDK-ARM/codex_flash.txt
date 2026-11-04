@@ -1,0 +1,2 @@
+Load "h7_1\\h7_1.axf" 
+Erase Done.Programming Done.Verify OK.Flash Load finished at 00:13:07

@@ -1,0 +1,190 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 Qwei, 1, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  D:\Keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Qwei\Desktop\New Folder\h7_2\MDK-ARM\h7_2.uvprojx
+Project File Date:  11/01/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil\ARM\ARMCC\Bin'
+Rebuild target 'h7_2'
+assembling startup_stm32h723xx.s...
+compiling main.c...
+../Core/Inc/spi.h(34): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+  extern SPI_HandleTypeDef hspi1;
+..\User_File\4_Task/tsk_config_and_callback.h(40): warning:  #1-D: last line of file ends without a newline
+  /************************ COPYRIGHT(C) USTC-ROBOWALKER **************************/
+../Core/Src/main.c(55): error:  #260-D: explicit type is missing ("int" assumed)
+    HAL_Init();
+../Core/Src/main.c(55): error:  #311: cannot overload functions distinguished by return type alone
+    HAL_Init();
+../Core/Src/main.c: 1 warning, 3 errors
+compiling stm32h7xx_hal_hsem.c...
+compiling gpio.c...
+compiling stm32h7xx_hal_gpio.c...
+compiling stm32h7xx_it.c...
+compiling stm32h7xx_hal_msp.c...
+compiling stm32h7xx_hal_mdma.c...
+compiling tim.c...
+compiling spi.c...
+../Core/Inc/spi.h(34): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+  extern SPI_HandleTypeDef hspi1;
+../Core/Src/spi.c(27): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+  SPI_HandleTypeDef hspi1;
+../Core/Src/spi.c(41): error:  #20: identifier "SPI_MODE_MASTER" is undefined
+    hspi1.Init.Mode = SPI_MODE_MASTER;
+../Core/Src/spi.c(42): error:  #20: identifier "SPI_DIRECTION_2LINES" is undefined
+    hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+../Core/Src/spi.c(43): error:  #20: identifier "SPI_DATASIZE_8BIT" is undefined
+    hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+../Core/Src/spi.c(44): error:  #20: identifier "SPI_POLARITY_LOW" is undefined
+    hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+../Core/Src/spi.c(45): error:  #20: identifier "SPI_PHASE_1EDGE" is undefined
+    hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+../Core/Src/spi.c(46): error:  #20: identifier "SPI_NSS_SOFT" is undefined
+    hspi1.Init.NSS = SPI_NSS_SOFT;
+../Core/Src/spi.c(47): error:  #20: identifier "SPI_BAUDRATEPRESCALER_64" is undefined
+    hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
+../Core/Src/spi.c(48): error:  #20: identifier "SPI_FIRSTBIT_MSB" is undefined
+    hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+../Core/Src/spi.c(49): error:  #20: identifier "SPI_TIMODE_DISABLE" is undefined
+    hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+../Core/Src/spi.c(50): error:  #20: identifier "SPI_CRCCALCULATION_DISABLE" is undefined
+    hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+../Core/Src/spi.c(52): error:  #20: identifier "SPI_NSS_PULSE_ENABLE" is undefined
+    hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+../Core/Src/spi.c(53): error:  #20: identifier "SPI_NSS_POLARITY_LOW" is undefined
+    hspi1.Init.NSSPolarity = SPI_NSS_POLARITY_LOW;
+../Core/Src/spi.c(54): error:  #20: identifier "SPI_FIFO_THRESHOLD_01DATA" is undefined
+    hspi1.Init.FifoThreshold = SPI_FIFO_THRESHOLD_01DATA;
+../Core/Src/spi.c(55): error:  #20: identifier "SPI_CRC_INITIALIZATION_ALL_ZERO_PATTERN" is undefined
+    hspi1.Init.TxCRCInitializationPattern = SPI_CRC_INITIALIZATION_ALL_ZERO_PATTERN;
+../Core/Src/spi.c(57): error:  #20: identifier "SPI_MASTER_SS_IDLENESS_00CYCLE" is undefined
+    hspi1.Init.MasterSSIdleness = SPI_MASTER_SS_IDLENESS_00CYCLE;
+../Core/Src/spi.c(58): error:  #20: identifier "SPI_MASTER_INTERDATA_IDLENESS_00CYCLE" is undefined
+    hspi1.Init.MasterInterDataIdleness = SPI_MASTER_INTERDATA_IDLENESS_00CYCLE;
+../Core/Src/spi.c(59): error:  #20: identifier "SPI_MASTER_RX_AUTOSUSP_DISABLE" is undefined
+    hspi1.Init.MasterReceiverAutoSusp = SPI_MASTER_RX_AUTOSUSP_DISABLE;
+../Core/Src/spi.c(60): error:  #20: identifier "SPI_MASTER_KEEP_IO_STATE_DISABLE" is undefined
+    hspi1.Init.MasterKeepIOState = SPI_MASTER_KEEP_IO_STATE_DISABLE;
+../Core/Src/spi.c(61): error:  #20: identifier "SPI_IO_SWAP_DISABLE" is undefined
+    hspi1.Init.IOSwap = SPI_IO_SWAP_DISABLE;
+../Core/Src/spi.c(62): error:  #20: identifier "HAL_SPI_Init" is undefined
+    if (HAL_SPI_Init(&hspi1) != HAL_OK)
+../Core/Src/spi.c(72): error:  #70: incomplete type is not allowed
+  void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
+../Core/Src/spi.c(72): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+  void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
+../Core/Src/spi.c(72): error:  #20: identifier "spiHandle" is undefined
+  void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
+../Core/Src/spi.c(73): error:  #65: expected a ";"
+  {
+../Core/Src/spi.c(94): warning:  #12-D: parsing restarts here after previous syntax error
+      __HAL_RCC_GPIOA_CLK_ENABLE();
+../Core/Src/spi.c(100): error:  #77-D: this declaration has no storage class or type specifier
+      GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
+../Core/Src/spi.c(100): error:  #65: expected a ";"
+      GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
+../Core/Src/spi.c(101): error:  #77-D: this declaration has no storage class or type specifier
+      GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+../Core/Src/spi.c(101): error:  #247: variable "GPIO_InitStruct"  has already been defined
+      GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+../Core/Src/spi.c: 1 warning, 30 errors
+compiling stm32h7xx_hal_flash.c...
+compiling stm32h7xx_hal_flash_ex.c...
+compiling stm32h7xx_hal_cortex.c...
+compiling stm32h7xx_hal_rcc.c...
+compiling fdcan.c...
+compiling alg_basic.cpp...
+compiling stm32h7xx_hal_rcc_ex.c...
+compiling alg_pid.cpp...
+compiling stm32h7xx_hal_dma_ex.c...
+compiling stm32h7xx_hal_dma.c...
+compiling stm32h7xx_hal_i2c_ex.c...
+compiling stm32h7xx_hal_pwr.c...
+compiling stm32h7xx_hal_exti.c...
+compiling tsk_config_and_callback.cpp...
+..\User_File\4_Task\tsk_config_and_callback.h(40): warning:  #1-D: last line of file ends without a newline
+  /************************ COPYRIGHT(C) USTC-ROBOWALKER **************************/
+../Core/Inc/spi.h(34): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+  extern SPI_HandleTypeDef hspi1;
+..\User_File\1_Middleware/Driver/SPI/drv_spi.h(45): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+      SPI_HandleTypeDef *SPI_Handler;
+..\User_File\1_Middleware/Driver/SPI/drv_spi.h(76): error:  #70: incomplete type is not allowed
+  void SPI_Init(SPI_HandleTypeDef *hspi, SPI_Callback Callback_Function);
+..\User_File\1_Middleware/Driver/SPI/drv_spi.h(76): error:  #20: identifier "SPI_HandleTypeDef" is undefined
+  void SPI_Init(SPI_HandleTypeDef *hspi, SPI_Callback Callback_Function);
+..\User_File\1_Middleware/Driver/SPI/drv_spi.h(76): error:  #20: identifier "hspi" is undefined
+  void SPI_Init(SPI_HandleTypeDef *hspi, SPI_Callback Callback_Function);
+..\User_File\1_Middleware/Driver/SPI/drv_spi.h(76): error:  #18: expected a ")"
+  void SPI_Init(SPI_HandleTypeDef *hspi, SPI_Callback Callback_Function);
+..\User_File\1_Middleware/Driver/SPI/drv_spi.h(78): error:  #18: expected a ")"
+  uint8_t SPI_Transmit_Data(SPI_HandleTypeDef *hspi, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState Activate_Level, uint16_t Tx_Length);
+..\User_File\1_Middleware/Driver/SPI/drv_spi.h(80): error:  #18: expected a ")"
+  uint8_t SPI_Transmit_Receive_Data(SPI_HandleTypeDef *hspi, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState Activate_Level, uint16_t Tx_Length, uint16_t Rx_Length);
+..\User_File\1_Middleware/Driver/SPI/drv_spi.h(84): warning:  #1-D: last line of file ends without a newline
+  /************************ COPYRIGHT(C) USTC-ROBOWALKER **************************/
+..\User_File\2_Device/BSP/BMI088/Accel/bsp_bmi088_accel_register.h(91): warning:  #1-D: last line of file ends without a newline
+  /************************ COPYRIGHT(C) USTC-ROBOWALKER **************************/
+..\User_File\1_Middleware/Driver/ADC/drv_adc.h(18): error:  #5: cannot open source input file "adc.h": No such file or directory
+  #include "adc.h"
+..\User_File\4_Task\tsk_config_and_callback.cpp: 3 warnings, 9 errors
+compiling system_stm32h7xx.c...
+compiling stm32h7xx_hal_spi.c...
+compiling stm32h7xx_hal.c...
+compiling stm32h7xx_hal_i2c.c...
+compiling stm32h7xx_hal_spi_ex.c...
+compiling sys_timestamp.cpp...
+compiling dvc_motor_dji.cpp...
+compiling drv_can.cpp...
+compiling stm32h7xx_hal_pwr_ex.c...
+compiling stm32h7xx_hal_tim_ex.c...
+compiling stm32h7xx_hal_fdcan.c...
+compiling stm32h7xx_hal_tim.c...
+"h7_2\h7_2.axf" - 42 Error(s), 5 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32H7xx_DFP.4.1.3.pack
+                Keil.STM32H7xx_DFP.4.1.3
+                STMicroelectronics STM32H7 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_h7_2
+  D:\Keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Target not created.
+Build Time Elapsed:  00:00:16
+</pre>
+</body>
+</html>

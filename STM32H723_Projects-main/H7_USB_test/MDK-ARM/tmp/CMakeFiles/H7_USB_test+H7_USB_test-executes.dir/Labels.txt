@@ -1,0 +1,12 @@
+# Target labels
+ H7_USB_test+H7_USB_test
+# Source files and their labels
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/CMakeFiles/H7_USB_test+H7_USB_test-executes
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/CMakeFiles/H7_USB_test+H7_USB_test-executes.rule
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-executes.rule
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-build.rule
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-configure.rule
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-patch.rule
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-update.rule
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-download.rule
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-mkdir.rule

@@ -1,0 +1,8 @@
+F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/database.dir
+F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/H7_VOFA_test+H7_VOFA_test.dir
+F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/H7_VOFA_test+H7_VOFA_test-build.dir
+F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/H7_VOFA_test+H7_VOFA_test-configure.dir
+F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/H7_VOFA_test+H7_VOFA_test-executes.dir
+F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/H7_VOFA_test+H7_VOFA_test-database.dir
+F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/edit_cache.dir
+F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/rebuild_cache.dir

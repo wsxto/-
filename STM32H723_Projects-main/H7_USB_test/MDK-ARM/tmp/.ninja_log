@@ -1,0 +1,15 @@
+# ninja log v6
+41	77	7930446589466187	H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-download	d64c434b702a19b1
+2	41	7930446589106086	F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-mkdir	17882f7be711a3fb
+2	41	7930446589106086	H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-mkdir	17882f7be711a3fb
+41	77	7930446589466187	F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-download	d64c434b702a19b1
+77	113	7930446589832444	H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-update	a6d7e8dc8bf3d1d8
+77	113	7930446589832444	F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-update	a6d7e8dc8bf3d1d8
+113	149	7930446590192206	H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-patch	8dc46ad74ffbb023
+113	149	7930446590192206	F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-patch	8dc46ad74ffbb023
+149	10337	7930446692064336	H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-configure	9d5561159266af76
+10337	10430	7930446692104909	H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-database	b2be5f0fd9737e4d
+149	10337	7930446692064336	F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-configure	9d5561159266af76
+10337	10430	7930446692104909	F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-database	b2be5f0fd9737e4d
+2	84	7930446699381366	H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-database	b2be5f0fd9737e4d
+2	84	7930446699381366	F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-database	b2be5f0fd9737e4d

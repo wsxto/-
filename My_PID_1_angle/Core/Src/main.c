@@ -27,7 +27,7 @@
 #include "pid.h"
 uint16_t count_prev = 0;
 volatile int16_t rpm = 0;
-volatile uint16_t motor_pwm = 0;
+volatile int16_t motor_pwm = 0;
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,14 +96,14 @@ int main(void)
   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 0);
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
-  PID_Init(&motor_pid, 9.0f, 0.30f, 0.01f);
+  PID_Init(&motor_pid, 3.0f, 0.30f, 0.01f);
   PID_Init(&post_pid, 1.0f, 0.30f, 0.01f);
 
   __HAL_TIM_SetCounter(&htim3 ,0);
   post_pid.target = 750;
   count_prev = (uint16_t)__HAL_TIM_GET_COUNTER(&htim1);
   HAL_TIM_Base_Start_IT(&htim3);
-  __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 50);
+  //__HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 50);
 
   /* USER CODE END 2 */
 

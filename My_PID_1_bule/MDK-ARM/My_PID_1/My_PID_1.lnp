@@ -8,6 +8,7 @@
 "my_pid_1\usart.o"
 "my_pid_1\stm32f1xx_it.o"
 "my_pid_1\stm32f1xx_hal_msp.o"
+"my_pid_1\command.o"
 "my_pid_1\stm32f1xx_hal_gpio_ex.o"
 "my_pid_1\stm32f1xx_hal_tim.o"
 "my_pid_1\stm32f1xx_hal_tim_ex.o"

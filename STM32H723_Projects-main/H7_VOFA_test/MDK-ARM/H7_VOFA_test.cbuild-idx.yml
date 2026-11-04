@@ -1,0 +1,21 @@
+build-idx:
+  generated-by: csolution version 2.13.0+p3-g40b6564e
+  csolution: H7_VOFA_test.csolution.yml
+  cbuild-run: out/H7_VOFA_test+H7_VOFA_test.cbuild-run.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: H7_VOFA_test.cproject.yml
+  cbuilds:
+    - cbuild: out/H7_VOFA_test/H7_VOFA_test/H7_VOFA_test+H7_VOFA_test.cbuild.yml
+      project: H7_VOFA_test
+      configuration: +H7_VOFA_test
+      messages:
+        warnings:
+          - file 'F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/.cmsis/H7_VOFA_test+H7_VOFA_test.dbgconf' not found; use --update-rte
+        info:
+          - H7_VOFA_test.cbuild-pack.yml - file is already up-to-date
+          - H7_VOFA_test+H7_VOFA_test.cbuild-run.yml - file is already up-to-date
+          - H7_VOFA_test+H7_VOFA_test.cbuild.yml - file is already up-to-date
+      packs-unused:
+        - pack: ARM::CMSIS-DSP@1.16.2
+        - pack: ARM::CMSIS-NN@4.1.0

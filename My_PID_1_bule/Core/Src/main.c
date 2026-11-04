@@ -26,6 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "command.h"
 #include "pid.h"
 /* USER CODE END Includes */
 
@@ -66,7 +67,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 	if(huart == &huart2)
 	{
 		HAL_UART_Transmit_DMA(&huart2,receiveData,Size);
-
+		(void)CommandBuffer_Write(receiveData, (uint8_t)Size);
 		
 		HAL_UARTEx_ReceiveToIdle_DMA(&huart2,receiveData,sizeof(receiveData));
 		__HAL_DMA_DISABLE_IT(&hdma_usart2_rx,DMA_IT_HT);
@@ -74,6 +75,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 
 	}
 }
+
 /* USER CODE END 0 */
 
 /**

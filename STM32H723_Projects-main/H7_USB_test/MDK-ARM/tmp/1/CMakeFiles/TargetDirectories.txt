@@ -1,0 +1,11 @@
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/database.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/H7_USB_test+H7_USB_test.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/Group_Application_MDK-ARM.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/Group_Application_User_Core.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/Group_Application_User_USB_DEVICE_App.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/Group_Application_User_USB_DEVICE_Target.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/Group_Drivers_STM32H7xx_HAL_Driver.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/Group_Drivers_CMSIS.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/Group_Middlewares_USB_Device_Library.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/edit_cache.dir
+F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/1/CMakeFiles/rebuild_cache.dir

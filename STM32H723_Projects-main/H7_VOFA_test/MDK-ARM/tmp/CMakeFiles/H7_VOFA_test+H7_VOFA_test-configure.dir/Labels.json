@@ -1,0 +1,34 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/H7_VOFA_test+H7_VOFA_test-configure"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/CMakeFiles/H7_VOFA_test+H7_VOFA_test-configure.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/H7_VOFA_test+H7_VOFA_test/src/H7_VOFA_test+H7_VOFA_test-stamp/H7_VOFA_test+H7_VOFA_test-configure.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/H7_VOFA_test+H7_VOFA_test/src/H7_VOFA_test+H7_VOFA_test-stamp/H7_VOFA_test+H7_VOFA_test-patch.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/H7_VOFA_test+H7_VOFA_test/src/H7_VOFA_test+H7_VOFA_test-stamp/H7_VOFA_test+H7_VOFA_test-update.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/H7_VOFA_test+H7_VOFA_test/src/H7_VOFA_test+H7_VOFA_test-stamp/H7_VOFA_test+H7_VOFA_test-download.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_VOFA_test/MDK-ARM/tmp/H7_VOFA_test+H7_VOFA_test/src/H7_VOFA_test+H7_VOFA_test-stamp/H7_VOFA_test+H7_VOFA_test-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"H7_VOFA_test+H7_VOFA_test"
+		],
+		"name" : "H7_VOFA_test+H7_VOFA_test-configure"
+	}
+}

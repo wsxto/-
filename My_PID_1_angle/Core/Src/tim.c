@@ -315,8 +315,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	if(htim->Instance ==TIM3)
 	{
 		//定义
-		uint16_t angle_target;
-		uint16_t cnt_prev;
 		
 		now =__HAL_TIM_GET_COUNTER(&htim1);
 		
@@ -325,7 +323,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		//cnt_all += cnt;
 		//int16_t gap_post =  (cnt) -  cnt_prev;
 		post_pid.actual = cnt;
-		motor_pid.target = (uint16_t)(PID_Calc(&post_pid, post_pid.target,post_pid.actual));
+		motor_pid.target = (int16_t)(PID_Calc(&post_pid, post_pid.target,post_pid.actual));
 		
 		//速度环
 		
@@ -348,14 +346,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		{
 			HAL_GPIO_WritePin(GPIOB,GPIO_PIN_10,GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11,GPIO_PIN_SET);
-			motor_pwm = motor_pwm ;
 		}
 		if(motor_pwm > 100)
 		{
 			motor_pwm = 100;
 		}
 		
-		//__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, motor_pwm);
+		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, motor_pwm);
 		
 	}
 }

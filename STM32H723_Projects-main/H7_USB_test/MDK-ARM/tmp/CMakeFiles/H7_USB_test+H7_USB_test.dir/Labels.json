@@ -1,0 +1,52 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/CMakeFiles/H7_USB_test+H7_USB_test"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/CMakeFiles/H7_USB_test+H7_USB_test.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/CMakeFiles/H7_USB_test+H7_USB_test-complete.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-build.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-configure.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-database.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-download.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-executes.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-install.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-mkdir.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-patch.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-test.rule"
+		},
+		{
+			"file" : "F:/spareE/My_projects/H7_USB_test/MDK-ARM/tmp/H7_USB_test+H7_USB_test/src/H7_USB_test+H7_USB_test-stamp/H7_USB_test+H7_USB_test-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"H7_USB_test+H7_USB_test"
+		],
+		"name" : "H7_USB_test+H7_USB_test"
+	}
+}
